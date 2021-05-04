@@ -38,18 +38,41 @@ The CNN then was tested on a test set. It scored a top-1 accuracy of 99.3%. Then
 
 ## Object Detection Approach
 
+For accurate classification of the objects, they first need to be localized by a computer vision algorithm that extracts a region of interest (ROI) that is inputted to the CNN. The device features an enclosure where the object is deposited and then the camera takes frames for the classification. 
+
+[Enclosure image]
+
+This enclosure has a constant background, for this reason the computer vision algorithm is based on a background subtraction (BS) with a mixture of Gaussian model (MOG). This BS model detects the presence of an object and then, with a saliency algorithm, the ROI is extracted and then passed to the CNN. It is basically a two-step object detector. A diagram of this process is presented below.
+
+[Diagram CV]
+
+Examples of how the algorithm works are presented below.
+
+[gif and stuff]
+
+A simple code of this methodology is presented in this [collab notebook](https://colab.research.google.com/notebooks/intro.ipynb).
+
+Overall, the classification system is a two stage object detector which features an % mAP at 75% IoU on the test set. The system is capable of running at 30 FPS at presence of object detection mode and 7 FPS at inference mode. These metrics were taken while running the algorithm in the Raspberry Pi 4 with Coral USB accelerator.
 
 ### End-to-End Object Detection Alternative
 
+There is also the option of using an end-to-end object detection CNN. This option was explored but expenses related to cloud computing moved the exploration of this approach to further research. The limited test done with this technique indicates that SSD-MobileNetV2 or SSDLite-MobileDet, seems suitable for the application. After the thesis work, a paper related performance, cost, time comparisons of two step objects detectors vs end-to-end object detectors for large deployment applications is scheduled for submission.
 
 ## Smart Bin Design
 
+The physical segregation is done with a mechanical system mainly based on RC servos actuators. It was designed with 3D CAD modeling software. The figures below show some features of the design.
+
+[Images ...]
 
 ## Dynamical Simulations for Electromechanical System Validation
 
+The kinematics and dynamics were validated with MATLAB Simscape Multibody. The control system was validated with 3D dynamic simulations, to mainly estimate the power consumption of the device. Overall, The system runs at 5 V power supply, in standby operation the system consumes < 4 A and during segregation a maximum of 9 A validated with simulations and physical experimentation. The figures below show the block diagram of the system and media of some simulations.
+
+[block diagram .... simulation of main actuator with current graph to the side]
 
 ## Integration of Software and Hardware
 
+Information yet to be released. Final tests and writing
 
 ## References
 
