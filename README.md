@@ -24,7 +24,7 @@ The most important factor for the performance of CNNs is the quality of the data
 
 ## CNNs for Image Classification
 
-The CNN used in this work is MobileNetV2 [2] tailor for image classification. It was previously trained on the ImageNet dataset and its weights were fine tuned with the previously mentioned Fotini10k dataset in cropped form. This CNN was chosen, because [1] concluded to be more suited to the purpose of this work. The modifications done to the architecture of MobileNetV2 and the training metrics are presented in the figures below.
+The CNN used in this work is MobileNetV2 [[2]](#references) tailor for image classification. It was previously trained on the ImageNet dataset and its weights were fine tuned with the previously mentioned Fotini10k dataset in cropped form. This CNN was chosen, because [[1]](#references) concluded to be more suited to the purpose of this work. The modifications done to the architecture of MobileNetV2 and the training metrics are presented in the figures below.
 
 ![figure_5](https://user-images.githubusercontent.com/31749600/117040759-d663bb00-accf-11eb-8262-3fceb1a01239.png) 
 
