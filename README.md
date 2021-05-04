@@ -34,6 +34,7 @@ The CNN used in this work is MobileNetV2 [[2]](#references) tailor for image cla
 
 > Training log of MobileNetV2 while fine-tuning with the Fotini10k dataset
 
+The CNN then was tested on a test set. It scored a top-1 accuracy of 99.3%. Then, it was quantized to `int8` weights to be used on a Raspberry Pi 4 along a [Coral USB accelerator](https://coral.ai/products/accelerator/). The quantization was done according to the [post-training quantization guidelines](https://www.tensorflow.org/lite/performance/post_training_quantization) from tensorflow. With quantization the top-1 accuracy dropped to 96.7%, which is more than useful.
 
 ## Object Detection Approach
 
