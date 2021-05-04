@@ -4,7 +4,7 @@ This repository contains samples of media, code, and dataset from my thesis:
 
 **`AUTOMATIC WASTE SORTING EXPERIMENTATION USING A NOVEL SMART TRASH BIN WITH CNN`**
 
-By the time of this commit, the main purpose of this repository is to showcase my work for my master's applications. Dear admission committee I kindly ask to not share this repository, since a patent related to the robot is in process. Later on, more information that will be permanently available and for public use, will be published. Thanks in advance!
+By the time of this commit, the main purpose of this repository is to showcase my work for my master's applications. Dear admission committee I kindly ask to not share this repository, since a patent related to the robot is in process. Later on, more information that will be permanently available for public use, will be published. Thanks in advance!
 
 Summary in standard format: [thesis_summary.pdf](https://github.com/jaimix4/smart-trash-bin-my-thesis/files/6422415/thesis_summary.pdf)
 
