@@ -4,7 +4,7 @@ This repository contains samples of media, code, and dataset from my thesis:
 
 **`AUTOMATIC WASTE SORTING EXPERIMENTATION USING A NOVEL SMART TRASH BIN WITH CNN`**
 
-By the time of this commit, the main purpose of this repository is to showcase my work for my master's applications. Dear admission committee I kindly ask to not share this repository, since a patent related to the robot is in process. Later on, more information that will be permanently available for public use, will be published. Thanks in advance!
+By the time of this commit, the main purpose of this repository is to showcase my work for my master's applications. Dear admission committee I kindly ask to not share this repository, since a patent related to the robot is in process. Later on, more information that will be permanently available and for public use, will be published. Thanks in advance!
 
 Summary in standard format: [thesis_summary.pdf](https://github.com/jaimix4/smart-trash-bin-my-thesis/files/6422415/thesis_summary.pdf)
 
@@ -18,11 +18,21 @@ The automatic classification is done with a convolutional neural network (CNN) m
 
 ## Fotini10k dataset
 
-The most important factor for the performance of CNNs is the quality of the dataset it is trained on. Quality in this sense can be translated into: number of examples, whether these examples are representative of the data the CNN will encounter in the "wild". The dataset used for fine-tuning the CNNs in this work is the Fotini10k dataset. This dataset features images of the following categories of recyclable objects: `plastic bottles`, `aluminum cans` and `paper and cardboard`. Examples can be found in the figures below. This dataset was developed in a previous work. More information about this dataset can be found [here](https://arxiv.org/abs/2104.00868).
+The most important factor for the performance of CNNs is the quality of the dataset it is trained on. Quality in this sense can be translated into: number of examples, whether these examples are representative of the data the CNN will encounter in the "wild". The dataset used for fine-tuning the CNNs in this work is the Fotini10k dataset. This dataset features images of the following categories of recyclable objects: `plastic bottles`, `aluminum cans` and `paper and cardboard`. Examples can be found in the figures below. This dataset was developed in a previous work. More information about this dataset can be found here [[1]](https://arxiv.org/abs/2104.00868).
 
 ![figure_1](https://user-images.githubusercontent.com/31749600/117036104-b54c9b80-acca-11eb-9823-75a1e01192db.jpg)
 
 ## CNNs for Image Classification
+
+The CNN used in this work is MobileNetV2 [2] tailor for image classification. It was previously trained on the ImageNet dataset and its weights were fine tuned with the previously mentioned Fotini10k dataset in cropped form. This CNN was chosen, because [1] concluded to be more suited to the purpose of this work. The modifications done to the architecture of MobileNetV2 and the training metrics are presented in the figures below.
+
+![figure_5](https://user-images.githubusercontent.com/31749600/117040759-d663bb00-accf-11eb-8262-3fceb1a01239.png) 
+
+> Modifications to the architecture of MobileNetV2
+
+![figure_8](https://user-images.githubusercontent.com/31749600/117040824-eb404e80-accf-11eb-81e6-4e6df8dfc98f.png)
+
+> Training log of MobileNetV2 while fine-tuning with the Fotini10k dataset
 
 
 ## Object Detection Approach
@@ -41,4 +51,9 @@ The most important factor for the performance of CNNs is the quality of the data
 
 
 ## References
+
+[1] 
+
+[2] 
+
 
