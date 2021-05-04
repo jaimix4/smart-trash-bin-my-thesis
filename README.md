@@ -22,23 +22,23 @@ The most important factor for the performance of CNNs is the quality of the data
 
 ![figure_1](https://user-images.githubusercontent.com/31749600/117036104-b54c9b80-acca-11eb-9823-75a1e01192db.jpg)
 
-# CNNs for Image Classification
+## CNNs for Image Classification
 
 
-# Object Detection Approach
+## Object Detection Approach
 
 
-## End-to-End Object Detection Alternative
+### End-to-End Object Detection Alternative
 
 
-# Smart Bin Design
+## Smart Bin Design
 
 
-# Dynamical Simulations for Electromechanical System Validation
+## Dynamical Simulations for Electromechanical System Validation
 
 
-# Integration of Software and Hardware
+## Integration of Software and Hardware
 
 
-# References
+## References
 
