@@ -12,7 +12,7 @@ Summary in standard format: [thesis_summary.pdf](https://github.com/jaimix4/smar
 
 Recycling has proven to be a partial solution to the global problem related to the accumulation of waste in the last decades. Nonetheless, overall recycling efficiency is reduced due the lack of an automatic classification method in large scale recycling facilities and on site waste collection. The current work offers a novel smart trash device capable of automatically classifying and segregating common recyclables objects on site. 
 
-![bins_mess](https://user-images.githubusercontent.com/31749600/117036851-7bc86000-accb-11eb-96fa-bb76af48269d.jpg)
+![IMG-0195](https://user-images.githubusercontent.com/31749600/117710978-54283a80-b198-11eb-87b8-558f49430365.jpg)
 
 The automatic classification is done with a convolutional neural network (CNN) model, computer vision algorithm and a common RGB camera for input. Once an object is thrown in the device, it is classified, then with the use of servo motors in a clever mechanical system, the object is physically segregated in the designated compartments. The next section will explain in more detail each part of the overall system.
 
