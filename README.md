@@ -23,7 +23,7 @@ The automatic classification is done with a convolutional neural network (CNN) m
 The most important factor for the performance of CNNs is the quality of the dataset it is trained on. Quality in this sense can be translated into: number of examples, whether these examples are representative of the data the CNN will encounter in the "wild". The dataset used for fine-tuning the CNNs in this work is the Fotini10k dataset. This dataset features images of the following categories of recyclable objects: `plastic bottles`, `aluminum cans` and `paper and cardboard`. Examples can be found in the figures below. This dataset was developed in a previous work. More information about this dataset can be found here [[1]](#references).
 
 <p align="center">
-<img width="500" src="https://user-images.githubusercontent.com/31749600/117040759-d663bb00-accf-11eb-8262-3fceb1a01239.png">
+<img width="500" src="https://user-images.githubusercontent.com/31749600/117036104-b54c9b80-acca-11eb-9823-75a1e01192db.jpg">
 </p>
 
 ## CNNs for Image Classification
