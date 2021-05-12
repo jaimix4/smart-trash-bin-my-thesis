@@ -12,7 +12,9 @@ Summary in standard format: [thesis_summary.pdf](https://github.com/jaimix4/smar
 
 Recycling has proven to be a partial solution to the global problem related to the accumulation of waste in the last decades. Nonetheless, overall recycling efficiency is reduced due the lack of an automatic classification method in large scale recycling facilities and on site waste collection. The current work offers a novel smart trash device capable of automatically classifying and segregating common recyclables objects on site. 
 
-![IMG-0195](https://user-images.githubusercontent.com/31749600/117710978-54283a80-b198-11eb-87b8-558f49430365.jpg)
+<p align="center">
+<img align="center" width="500" src="https://user-images.githubusercontent.com/31749600/117710978-54283a80-b198-11eb-87b8-558f49430365.jpg">
+</p>
 
 The automatic classification is done with a convolutional neural network (CNN) model, computer vision algorithm and a common RGB camera for input. Once an object is thrown in the device, it is classified, then with the use of servo motors in a clever mechanical system, the object is physically segregated in the designated compartments. The next section will explain in more detail each part of the overall system.
 
@@ -20,17 +22,23 @@ The automatic classification is done with a convolutional neural network (CNN) m
 
 The most important factor for the performance of CNNs is the quality of the dataset it is trained on. Quality in this sense can be translated into: number of examples, whether these examples are representative of the data the CNN will encounter in the "wild". The dataset used for fine-tuning the CNNs in this work is the Fotini10k dataset. This dataset features images of the following categories of recyclable objects: `plastic bottles`, `aluminum cans` and `paper and cardboard`. Examples can be found in the figures below. This dataset was developed in a previous work. More information about this dataset can be found here [[1]](#references).
 
-![figure_1](https://user-images.githubusercontent.com/31749600/117036104-b54c9b80-acca-11eb-9823-75a1e01192db.jpg)
+<p align="center">
+<img width="500" src="https://user-images.githubusercontent.com/31749600/117040759-d663bb00-accf-11eb-8262-3fceb1a01239.png">
+</p>
 
 ## CNNs for Image Classification
 
 The CNN used in this work is MobileNetV2 [[2]](#references) tailor for image classification. It was previously trained on the ImageNet dataset and its weights were fine tuned with the previously mentioned [Fotini10k dataset](#fotini10k-dataset) in cropped form. This CNN was chosen, because [[1]](#references) concluded to be more suited to the purpose of this work. The modifications done to the architecture of MobileNetV2 and the training metrics are presented in the figures below.
 
-![figure_5](https://user-images.githubusercontent.com/31749600/117040759-d663bb00-accf-11eb-8262-3fceb1a01239.png) 
+<p align="center">
+<img width="500" src="https://user-images.githubusercontent.com/31749600/117040759-d663bb00-accf-11eb-8262-3fceb1a01239.png">
+</p>
 
 > Modifications to the architecture of MobileNetV2
 
-![figure_8](https://user-images.githubusercontent.com/31749600/117040824-eb404e80-accf-11eb-81e6-4e6df8dfc98f.png)
+<p align="center">
+<img width="500" src="https://user-images.githubusercontent.com/31749600/117040824-eb404e80-accf-11eb-81e6-4e6df8dfc98f.png">
+</p>
 
 > Training log of MobileNetV2 while fine-tuning with the Fotini10k dataset
 
@@ -40,7 +48,9 @@ The CNN then was tested on a test set. It scored a top-1 accuracy of 99.3%. Then
 
 For accurate classification of the objects, they first need to be localized by a computer vision algorithm that extracts a region of interest (ROI) that is inputted to the CNN. The device features an enclosure where the object is deposited and then the camera takes frames for the classification. 
 
-<img align="center" width="500" src=https://user-images.githubusercontent.com/31749600/118022079-92049a80-b321-11eb-81d6-28865d2acaec.jpg>
+<p align="center">
+<img width="500" src=https://user-images.githubusercontent.com/31749600/118022079-92049a80-b321-11eb-81d6-28865d2acaec.jpg>
+</p>
 
 This enclosure has a constant background, for this reason the computer vision algorithm is based on a background subtraction (BS) with a mixture of Gaussian model (MOG). This BS model detects the presence of an object and then, with a saliency algorithm, the ROI is extracted and then passed to the CNN. It is basically a two-step object detector. A diagram of this process is presented below.
 
