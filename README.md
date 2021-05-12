@@ -79,7 +79,11 @@ There is also the option of using an end-to-end object detection CNN. This optio
 
 The physical segregation is done with a mechanical system mainly based on RC servos actuators. It was designed with 3D CAD modeling software. The figures below show some features of the design.
 
-[Images ...]
+<p align="center">
+<img width="400" src="https://user-images.githubusercontent.com/31749600/118026558-85cf0c00-b326-11eb-90dd-ad79b34372cf.png">
+</p>
+
+**`THIS IS CONFIDENTIAL INFORMATION. PATENT IN PROCCESS.`**
 
 ## Dynamical Simulations for Electromechanical System Validation
 
@@ -93,8 +97,8 @@ Information yet to be released. Final tests and writing
 
 ## References
 
-[1] 
+[1] Caballero, J., Vergara, F., Miranda, R. and Serracín, J., 2021. Inference of Recyclable Objects with Convolutional Neural Networks. arXiv preprint arXiv:2104.00868.
 
-[2] 
+[2] Sandler, M., Howard, A., Zhu, M., Zhmoginov, A. and Chen, L.C., 2018. Mobilenetv2: Inverted residuals and linear bottlenecks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 4510-4520).
 
 
