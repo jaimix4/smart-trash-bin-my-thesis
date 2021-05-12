@@ -40,7 +40,7 @@ The CNN then was tested on a test set. It scored a top-1 accuracy of 99.3%. Then
 
 For accurate classification of the objects, they first need to be localized by a computer vision algorithm that extracts a region of interest (ROI) that is inputted to the CNN. The device features an enclosure where the object is deposited and then the camera takes frames for the classification. 
 
-[Enclosure image]
+<img align="center" width="500" src=https://user-images.githubusercontent.com/31749600/118022079-92049a80-b321-11eb-81d6-28865d2acaec.jpg>
 
 This enclosure has a constant background, for this reason the computer vision algorithm is based on a background subtraction (BS) with a mixture of Gaussian model (MOG). This BS model detects the presence of an object and then, with a saliency algorithm, the ROI is extracted and then passed to the CNN. It is basically a two-step object detector. A diagram of this process is presented below.
 
